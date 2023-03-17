@@ -6,19 +6,16 @@ public class InsertionSort implements Sorter{
 
     @Override
     public int[] sort(int[] arr) {
-        //int [] sorted = arr.clone();
-        int chave = 0;
-        for (int i = 1 ; i < arr.length; i++){
-            chave = arr[i];
-            int j = i;
-            while (chave > arr[j]){
-                int a = sorted[i];
-                sorted[i] = sorted[i+1];
-                sorted[i+1] = a;
+        int n = arr.length;
+        for (int i = 1; i<n; i++){
+            int chave = arr[i];
+            int j = i-1;
+            while (j>=0 && arr[j]>chave){
+                arr[j+1] = arr[j];
                 j--;
             }
+            arr[j+1] = chave;
         }
-        
         return arr;
     }
 
