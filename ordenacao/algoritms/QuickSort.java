@@ -5,7 +5,7 @@ import ordenacao.Sorter;
 public class QuickSort implements Sorter {
 
     @Override
-    public int[] sort(int[] elements) {
+    public int[] sort(int[] arr) {
         int inicio = 0;
         quickSort(arr,inicio, arr.length-1);
         return arr;
@@ -17,7 +17,6 @@ public class QuickSort implements Sorter {
             quickSort(arr, inicio, pivo);
             quickSort(arr, pivo+1, fim);
         }
-       // return arr;
     }
 
     private static int particao(int [] arr, int inicio, int fim){

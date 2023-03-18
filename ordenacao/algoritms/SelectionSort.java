@@ -5,7 +5,7 @@ import ordenacao.Sorter;
 public class SelectionSort implements Sorter{
 
     @Override
-    public int[] sort(int[] elements) {
+    public int[] sort(int[] arr) {
         int n = arr.length;
         int chave = 0;
         for (int i = 0; i<n-1; i++){
